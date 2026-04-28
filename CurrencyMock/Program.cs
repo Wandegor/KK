@@ -1,24 +1,21 @@
-﻿using System.Net.Http.Json;
-using KK;
+﻿using KK;
 
 class Program
 {
-    static async Task Main(string[] args)
+    static async Task Main()
     {
         // локальный Mountebank
-        string url = "http://localhost:4545/api/rate";
-        
+        string url = "http://localhost:4545";
         using HttpClient client = new();
+        var service = new CurrencyService(client, url);
 
         Console.WriteLine("Запрашиваем курс валют у Mock-сервиса...");
 
-        try 
+        try
         {
-            CurrencyResponse? response = await client.GetFromJsonAsync<CurrencyResponse>(url);
-
+            var response = await service.GetRateAsync();
             if (response != null)
             {
-                Console.WriteLine("--- Данные получены успешно ---");
                 Console.WriteLine($"Валюта: {response.Currency}");
                 Console.WriteLine($"Курс: {response.Rate} руб.");
                 Console.WriteLine($"Дата обновления: {response.Date}");

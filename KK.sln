@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyMock", "CurrencyMock\CurrencyMock.csproj", "{30ECFC65-A737-4CB6-8974-236275872221}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyMock.Tests", "CurrencyMock.Tests\CurrencyMock.Tests.csproj", "{4E88BDFD-4A8D-4B8A-91A1-9834C8F339D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{30ECFC65-A737-4CB6-8974-236275872221}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30ECFC65-A737-4CB6-8974-236275872221}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30ECFC65-A737-4CB6-8974-236275872221}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E88BDFD-4A8D-4B8A-91A1-9834C8F339D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E88BDFD-4A8D-4B8A-91A1-9834C8F339D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E88BDFD-4A8D-4B8A-91A1-9834C8F339D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E88BDFD-4A8D-4B8A-91A1-9834C8F339D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
