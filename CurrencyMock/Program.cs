@@ -8,14 +8,13 @@ class Program
         // локальный Mountebank
         string url = "http://localhost:4545/api/rate";
         
-        using var client = new HttpClient();
+        using HttpClient client = new();
 
         Console.WriteLine("Запрашиваем курс валют у Mock-сервиса...");
 
         try 
         {
-            // Отправляем запрос
-            var response = await client.GetFromJsonAsync<CurrencyResponse>(url);
+            CurrencyResponse? response = await client.GetFromJsonAsync<CurrencyResponse>(url);
 
             if (response != null)
             {
