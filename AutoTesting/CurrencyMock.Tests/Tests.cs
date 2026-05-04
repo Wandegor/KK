@@ -2,7 +2,7 @@ using KK;
 
 namespace CurrencyMock.Tests;
 
-public class UnitTest1
+public class Tests
 {
     private const string BaseUrl = "http://localhost:4545";
     
