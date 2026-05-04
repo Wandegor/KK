@@ -13,7 +13,7 @@ class Program
 
         try
         {
-            var response = await service.GetRateAsync();
+            var response = await service.GetRateAsync("USD");
             if (response != null)
             {
                 Console.WriteLine($"Валюта: {response.Currency}");

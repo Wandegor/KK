@@ -13,9 +13,13 @@ public class CurrencyService
         _baseUrl = baseUrl.TrimEnd('/');
     }
 
-    public async Task<CurrencyResponse?> GetRateAsync()
+    public async Task<CurrencyResponse?> GetRateAsync(string? currency)
     {
         var url = $"{_baseUrl}/api/rate";
+        if (!string.IsNullOrEmpty(currency))
+        {
+            url+= $"?currency={currency}";
+        }
         return await _httpClient.GetFromJsonAsync<CurrencyResponse>(url);
     }
 }
